@@ -3,7 +3,10 @@ const Category =require("../models/Category");
 
 const User =require("../models/User");
 const { uploadImageToCloudinary } =require("../utils/imageUploder");
+const multer = require('multer');
+const storage = multer.memoryStorage();
 
+const upload = multer({ storage: storage });
 
 exports.addProperties = async (req, res) => {
 	try {
