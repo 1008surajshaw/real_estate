@@ -11,10 +11,6 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
   password: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -31,9 +27,6 @@ const User = sequelize.define('User', {
     type: DataTypes.BOOLEAN,
     defaultValue: true,
   },
-  // token: {
-  //   type: DataTypes.STRING,
-  // },
   resetPasswordExpires: {
     type: DataTypes.DATE,
     defaultValue: null, // or a specific date
@@ -47,8 +40,6 @@ const User = sequelize.define('User', {
     allowNull: false,
   }
  }, {
-  // timestamps: true,
-  // underscored: true,
   tableName: 'users',
 });
 

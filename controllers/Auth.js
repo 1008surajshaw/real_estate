@@ -133,10 +133,9 @@ exports.signup = async (req, res) => {
      //console.log('test',email, otp, firstName, lastName, password, accountType, contactNumber)
      // Create a new user in the database
       const user = await User.create({
-        firstName:'tttest',
-        lastName,
-        email,
-        password: hashedPassword,
+        firstName,
+         lastName,
+         password: hashedPassword,
         accountType,
         contactNumber,
         image: `https://api.dicebear.com/5.x/initials/svg?seed=${firstName}%20${lastName}`,
