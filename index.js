@@ -9,10 +9,13 @@ dotenv.config();
 const contact = require("./routers/Contact")
 const Properties = require("./routers/Properties")
 const User = require("./routers/User")
-const PORT = process.env.PORT || 5000;
-const database = require("./config/database")
+ const PORT = process.env.PORT || 5000;
+// const database = require("./config/database")
+const database = require('./models/sequelize')
+const { Sequelize } = require('sequelize');
 
-database.connect();
+
+
 //middleware
 app.use(express.json());
 app.use(cookieParser());
@@ -30,8 +33,8 @@ app.use(
     })
 )
 app.use("/api/v1/auth",User);
-app.use("/api/v1/contact",contact);
-app.use("/api/v1/properties",Properties);
+// app.use("/api/v1/contact",contact);
+// app.use("/api/v1/properties",Properties);
 
 
 app.get("/",(req,res) =>{

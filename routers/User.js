@@ -22,7 +22,7 @@ const {auth} =require("../middlewares/auth")
 // ********************************************************************************************************
 
 // Route for user login
-router.post("/login", login)
+// router.post("/login", login)
 
 // Route for user signup
 router.post("/signup", signup)
@@ -31,17 +31,17 @@ router.post("/signup", signup)
 router.post("/sendotp", sendotp)
 
 // Route for Changing the password
-router.put("/changepassword", auth, changePassword)
+// router.put("/changepassword", auth, changePassword)
 
 // ********************************************************************************************************
 //                                      Reset Password
 // ********************************************************************************************************
 
 // Route for generating a reset password token
-router.post("/reset-password-token", resetPasswordToken)
+//router.post("/reset-password-token", resetPasswordToken)
 
 // Route for resetting user's password after verification
-router.post("/reset-password", resetPassword)
+//router.post("/reset-password", resetPassword)
 
 // Export the router for use in the main application
 module.exports = router
